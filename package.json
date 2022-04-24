@@ -1,10 +1,12 @@
 {
-  "name": "@tibi/ts-babel-remove-console-plugin",
+  "name": "ts-babel-remove-console-plugin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf lib && npm run build:types",
+    "build:types": "tsc --skipLibCheck --emitDeclarationOnly",
+    "test": "jest -u"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,18 @@
   },
   "homepage": "https://github.com/lzbgithubcode/ts-babel-remove-console-plugin#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/traverse": "^7.17.9",
+    "@types/babel__core": "^7.1.19",
+    "@types/babel__traverse": "^7.17.0",
+    "@types/jest": "^27.4.1",
+    "babel-jest": "^27.5.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^27.5.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   }
 }
