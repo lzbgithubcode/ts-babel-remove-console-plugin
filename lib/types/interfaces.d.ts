@@ -2,8 +2,8 @@
  * 作者: lzb
  * 功能: 接口
  */
-export declare namespace pluginInterfaces {
-    type Options = {
+export declare namespace Interfaces {
+    type TOptions = {
         /**
          * 排除检测
          */
@@ -18,8 +18,7 @@ export declare namespace pluginInterfaces {
     /**
      * 插件配置的options
      */
-    export interface IPluginOption {
-        opts: Options;
+    interface IPluginOption {
+        opts: TOptions;
     }
-    export {};
 }

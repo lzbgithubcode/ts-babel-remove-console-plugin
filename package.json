@@ -1,12 +1,15 @@
 {
   "name": "ts-babel-remove-console-plugin",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "基于ts的babel插件，可去除编译之后的console.xxx",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && npm run build:types",
-    "build:types": "tsc --skipLibCheck --emitDeclarationOnly",
-    "test": "jest -u"
+    "build": "rimraf lib && npm run build:types && npm run  build:prod",
+    "build:types": "tsc --skipLibCheck",
+    "build:prod": "babel src --out-dir lib --extensions \".ts,.tsx\" --copy-files",
+    "test": "jest -u",
+    "coverage": "rimraf coverage && jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,8 +23,8 @@
   },
   "homepage": "https://github.com/lzbgithubcode/ts-babel-remove-console-plugin#readme",
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@babel/traverse": "^7.17.9",
