@@ -4,7 +4,7 @@
  */
 export namespace Interfaces {
 
-     type Options = {
+     export type TOptions = {
          /**
           * 排除检测
           */
@@ -19,6 +19,6 @@ export namespace Interfaces {
      * 插件配置的options
      */
     export interface IPluginOption {
-        opts:Options
+        opts:TOptions
     }
 }

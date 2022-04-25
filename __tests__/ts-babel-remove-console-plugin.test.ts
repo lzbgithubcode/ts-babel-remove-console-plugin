@@ -25,12 +25,13 @@ const readOptions = (fixtureName:string): string | undefined =>{
     let optionsString;
     try {
         optionsString = fs.readFileSync(optionsPath(fixtureName), "utf8");
-    }catch (e) {
+    }catch (e: any) {
         if (e.code === 'ENOENT') {
             return undefined;
         }
         throw e;
     }
+    let options;
     return eval(`options = ${optionsString}`);
 }
 
@@ -48,7 +49,7 @@ const runTransform = (fixtureName:string): string=>{
    });
    return result && result.code ? result.code : "";
 };
-const testDirs: Array<string> = ["basic"];
+const testDirs: Array<string> = ["basic", "optionsBase"];
 
 describe("ts-babel-remove-console-plugin", ()=>{
    testDirs.forEach(testCase => {

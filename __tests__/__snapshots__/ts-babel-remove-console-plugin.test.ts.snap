@@ -9,3 +9,10 @@ exports[`ts-babel-remove-console-plugin handle case  basic 1`] = `
   console.error(\\"我是测试error\\");
 }"
 `;
+
+exports[`ts-babel-remove-console-plugin handle case  optionsBase 1`] = `
+"function foo() {
+  blah();
+  console.error(\\"我是测试error\\");
+}"
+`;
