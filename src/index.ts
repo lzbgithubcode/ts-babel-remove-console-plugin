@@ -56,7 +56,7 @@ export default function removeConsolePlugin(options:Interfaces.IPluginOption, ):
         }
     };
     return {
-        name: "ts-babel-remove-console-plugin",
+        name: "zb-babel-remove-console-plugin",
         visitor: visitorObj
     }
 }

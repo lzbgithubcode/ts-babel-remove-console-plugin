@@ -1,5 +1,5 @@
 {
-  "name": "ts-babel-remove-console-plugin",
+  "name": "zb-babel-remove-console-plugin",
   "version": "1.0.0",
   "description": "基于ts的babel插件，可去除编译之后的console.xxx",
   "main": "lib/index.js",
