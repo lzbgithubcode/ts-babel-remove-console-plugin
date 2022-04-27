@@ -14,7 +14,18 @@
 #### 配合babel使用
 ```js
     // babel.config.js
-
+   const plugins = [xxx];
+    plugins.push([
+        "zb-remove-console",
+        {
+            exclude:['error'],
+            noCloseConsole: false,
+        }
+    ]);
+    module.exports = {
+        plugins,
+        presets: [xxx]
+    };
 ```
 
 #### 参考文献
