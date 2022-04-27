@@ -26,7 +26,7 @@ export function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: 
     // 获取属性
     const property = memberExpr.get('property') as NodePath<MemberExpression>;
 
-    if(!opts.closeConsole) return  false;
+    if(opts.noCloseConsole) return  false;
 
     // 是否在数组id中
     if(isNameInArray(property, opts.exclude)) return false;
@@ -47,7 +47,7 @@ export function isIncludedConsoleBind(memberExpr: NodePath<MemberExpression>, op
     // 获取属性
     const property = memberExpr.get('property') as NodePath<MemberExpression>;
 
-    if(!opts.closeConsole) return  false;
+    if(opts.noCloseConsole) return  false;
 
     if(!object.isMemberExpression()) return  false;
 

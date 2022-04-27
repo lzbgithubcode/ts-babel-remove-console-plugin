@@ -10,9 +10,9 @@ export namespace Interfaces {
           */
          exclude?: {name: string}[],
          /**
-          * 是否关闭打印
+          * 不处理console
           */
-         closeConsole?: boolean,
+         noCloseConsole?: boolean,
      }
 
     /**

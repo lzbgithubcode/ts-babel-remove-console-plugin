@@ -40,7 +40,7 @@ export default function removeConsolePlugin(options:Interfaces.IPluginOption, ):
         MemberExpression:{
           exit(path: NodePath<MemberExpression>, state): void{
               // 不处理
-              if(options.opts && !options.opts.closeConsole){
+              if(options.opts && options.opts.noCloseConsole){
                   return;
               }
               if(isIncludedConsole(path, state.opts) && !path.parentPath.isMemberExpression()){
