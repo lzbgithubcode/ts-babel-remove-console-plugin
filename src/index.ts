@@ -55,8 +55,9 @@ export default function removeConsolePlugin(options:Interfaces.IPluginOption, ):
           }
         }
     };
+    // babel插件默认增加头babel-plugin-
     return {
-        name: "zb-babel-remove-console-plugin",
+        name: "zb-remove-console",
         visitor: visitorObj
     }
 }

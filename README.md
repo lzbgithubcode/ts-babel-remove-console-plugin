@@ -1,10 +1,10 @@
 
-#### zb-babel-remove-console-plugin 
+#### babel-plugin-zb-remove-console
 基于ts的babel插件， 通过babel -> AST过程 中移除/替换`console.xxxxx`代码
 
 
 #### 安装
-`npm install zb-babel-remove-console-plugin --save-dev`
+`npm install babel-plugin-zb-remove-console --save-dev`
 
 
 #### 配置
