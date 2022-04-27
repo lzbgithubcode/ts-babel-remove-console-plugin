@@ -11,9 +11,9 @@ export declare namespace Interfaces {
             name: string;
         }[];
         /**
-         * 是否关闭打印
+         * 不处理console
          */
-        closeConsole?: boolean;
+        noCloseConsole?: boolean;
     };
     /**
      * 插件配置的options
