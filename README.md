@@ -34,8 +34,8 @@ A lightweight babel plug-in for `console` remove, Remove/replace `console.*` cod
 
 | option   | description  | default   | 
 | ---- --- | ---------- | --------- |
-| `removeConsole`| Remove the console after it opens | `true` |
-| `exclude`| Exclude the console method that cannot be removed | `[]| or no set` all remove |
+| `removeConsole` | Remove the console after it opens | `true` |
+| `exclude` | Exclude the console method that cannot be removed | `[]| or no set` all remove |
 
 #### 参考文献
 [babel插件编写中文文档](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
