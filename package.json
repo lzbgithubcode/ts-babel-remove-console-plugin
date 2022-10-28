@@ -1,7 +1,7 @@
 {
   "name": "remove-console-babel-plugin",
-  "version": "0.0.7",
-  "description": "基于ts的babel插件，可去除编译之后的console.*",
+  "version": "0.0.8",
+  "description": "Ts-based babel plugin that removes the compiled console.*",
   "main": "dist/index.js",
   "types": "types/index.d.ts",
   "scripts": {
