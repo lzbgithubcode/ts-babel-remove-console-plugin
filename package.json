@@ -1,6 +1,6 @@
 {
-  "name": "babel-plugin-zb-remove-console",
-  "version": "0.0.4",
+  "name": "remove-console-babel-plugin",
+  "version": "0.0.5",
   "description": "基于ts的babel插件，可去除编译之后的console.xxx",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",
@@ -18,7 +18,15 @@
   "files": [
     "lib"
   ],
-  "keywords": [],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "console",
+    "node"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
