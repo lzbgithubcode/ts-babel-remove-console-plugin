@@ -1,5 +1,5 @@
 
-#### remove-console-babel-plugi
+#### remove-console-babel-plugin
 A lightweight babel plug-in for `console` remove, Remove/replace `console.*` code through babel -> AST procedure
 
 
