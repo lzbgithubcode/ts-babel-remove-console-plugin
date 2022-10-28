@@ -2,14 +2,13 @@ const presets = [
     [
         '@babel/preset-env',
         {
-            targets: {
-                node: '6.9',
-            },
-        },
+            "targets": {
+                "node": "current"
+            }
+        }
     ],
     "@babel/typescript"
 ];
 module.exports = {
     presets,
-
 };

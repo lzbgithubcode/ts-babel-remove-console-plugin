@@ -28,7 +28,7 @@ function isIncludedConsole(memberExpr, opts) {
   const object = memberExpr.get("object"); // 获取属性
 
   const property = memberExpr.get('property');
-  if (opts.noCloseConsole) return false; // 是否在数组id中
+  if (!opts.removeConsole) return false; // 是否在数组id中
 
   if (isNameInArray(property, opts.exclude)) return false; // 判断console
 
@@ -46,7 +46,7 @@ function isIncludedConsoleBind(memberExpr, opts) {
   const object = memberExpr.get("object"); // 获取属性
 
   const property = memberExpr.get('property');
-  if (opts.noCloseConsole) return false;
+  if (!opts.removeConsole) return false;
   if (!object.isMemberExpression()) return false;
   if (isNameInArray(property, opts.exclude)) return false;
   const result = isIdWithNameGlobal('console', object.get('object')) && memberExpr.get('property').isIdentifier({

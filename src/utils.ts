@@ -13,20 +13,20 @@ import {
     UnaryExpression,
     FunctionExpression
 } from "@babel/types";
-import {Interfaces} from "./interfaces";
+import {IOptions, IPluginOption} from "./interfaces";
 
 /**
  * 是否包含console
  * @param memberExpr NodePath
  * @param exclude {name: string}
  */
-export function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: Interfaces.TOptions): boolean{
+export function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: IOptions): boolean{
     // 获取对象
     const object =  memberExpr.get("object") as NodePath<MemberExpression>;
     // 获取属性
     const property = memberExpr.get('property') as NodePath<MemberExpression>;
 
-    if(opts.noCloseConsole) return  false;
+    if(!opts.removeConsole) return  false;
 
     // 是否在数组id中
     if(isNameInArray(property, opts.exclude)) return false;
@@ -41,13 +41,13 @@ export function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: 
     return  result;
 }
 
-export function isIncludedConsoleBind(memberExpr: NodePath<MemberExpression>, opts: Interfaces.TOptions) : boolean {
+export function isIncludedConsoleBind(memberExpr: NodePath<MemberExpression>, opts: IOptions) : boolean {
     // 获取对象
     const object =  memberExpr.get("object") as NodePath<MemberExpression>;
     // 获取属性
     const property = memberExpr.get('property') as NodePath<MemberExpression>;
 
-    if(opts.noCloseConsole) return  false;
+    if(!opts.removeConsole) return  false;
 
     if(!object.isMemberExpression()) return  false;
 

@@ -26,7 +26,7 @@
     /* Modules */
     "module": "commonjs",                                /* 代码生成的格式. */
     // "rootDir": "./",                                  /* Specify the root folder within your source files. */
-    "outDir": "lib",                                      /* 编译输出的js的目录. */
+    "outDir": "dist",                                      /* 编译输出的js的目录. */
 //     "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
@@ -44,7 +44,7 @@
 
     /* Emit */
      "declaration": true,                              /* 可以自动生成声明文件 .d.ts. */
-     "declarationDir": "lib/types",                           /* Specify the output directory for generated declaration files. */
+     "declarationDir": "types",                           /* Specify the output directory for generated declaration files. */
 //     "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
 //     "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
 //     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */

@@ -16,7 +16,9 @@ var _utils = require("./utils");
 function removeConsolePlugin(options) {
   const visitorObj = {
     CallExpression(path, state) {
-      const callee = path.get("callee"); // 如果是不是 isMemberExpression 不处理
+      const callee = path.get("callee"); // 默认值
+
+      state.opts.removeConsole = state.opts.removeConsole == true || state.opts.removeConsole == false ? state.opts.removeConsole : true; // 如果是不是 isMemberExpression 不处理
 
       if (!callee.isMemberExpression()) {
         return;
@@ -41,7 +43,7 @@ function removeConsolePlugin(options) {
     MemberExpression: {
       exit(path, state) {
         // 不处理
-        if (options.opts && options.opts.noCloseConsole) {
+        if (options.opts && options.opts.removeConsole) {
           return;
         }
 

@@ -1,24 +1,23 @@
 /**
  * 作者: lzb
  * 功能: 接口
- */
-export namespace Interfaces {
-
-     export type TOptions = {
-         /**
-          * 排除检测
-          */
-         exclude?: {name: string}[],
-         /**
-          * 不处理console
-          */
-         noCloseConsole?: boolean,
-     }
+ */interface IOptions{
 
     /**
-     * 插件配置的options
-     */
-    export interface IPluginOption {
-        opts:TOptions
-    }
+    * Whether to remove  console methods
+    */
+   removeConsole?: boolean,
+
+  /**
+   * exclude 
+   */
+   exclude?: {name: string}[],
+  
 }
+
+
+interface IPluginOption{
+     opts: IOptions
+}
+
+export {IOptions, IPluginOption}

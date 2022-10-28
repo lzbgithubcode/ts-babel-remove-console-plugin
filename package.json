@@ -1,22 +1,19 @@
 {
   "name": "remove-console-babel-plugin",
-  "version": "0.0.6",
-  "description": "基于ts的babel插件，可去除编译之后的console.xxx",
-  "main": "lib/index.js",
-  "types": "lib/types/index.d.ts",
+  "version": "0.0.7",
+  "description": "基于ts的babel插件，可去除编译之后的console.*",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
-    "build": "rimraf lib && npm run build:types && npm run  build:prod",
+    "build": "rimraf dist && npm run build:types && npm run  build:prod",
     "build:types": "tsc --skipLibCheck",
-    "build:prod": "babel src --out-dir lib --extensions \".ts,.tsx\" --copy-files",
+    "build:prod": "babel src --out-dir dist --extensions \".ts,.tsx\" --copy-files",
     "test": "jest -u",
     "coverage": "rimraf coverage && jest --coverage"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lzbgithubcode/ts-babel-remove-console-plugin.git"
-  },
+ 
   "files": [
-    "lib"
+    "dist"
   ],
   "engines": {
     "node": ">=12.0.0"
@@ -27,8 +24,12 @@
     "console",
     "node"
   ],
-  "author": "",
+  "author": "lzb",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzbgithubcode/ts-babel-remove-console-plugin.git"
+  },
   "bugs": {
     "url": "https://github.com/lzbgithubcode/ts-babel-remove-console-plugin/issues"
   },

@@ -5,14 +5,14 @@
  */
 import { NodePath } from "@babel/core";
 import { MemberExpression, UnaryExpression, FunctionExpression } from "@babel/types";
-import { Interfaces } from "./interfaces";
+import { IOptions } from "./interfaces";
 /**
  * 是否包含console
  * @param memberExpr NodePath
  * @param exclude {name: string}
  */
-export declare function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: Interfaces.TOptions): boolean;
-export declare function isIncludedConsoleBind(memberExpr: NodePath<MemberExpression>, opts: Interfaces.TOptions): boolean;
+export declare function isIncludedConsole(memberExpr: NodePath<MemberExpression>, opts: IOptions): boolean;
+export declare function isIncludedConsoleBind(memberExpr: NodePath<MemberExpression>, opts: IOptions): boolean;
 /**
  * 名称是否在数组
  * @param property NodePath
